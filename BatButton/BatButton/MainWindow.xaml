@@ -6,9 +6,33 @@
         xmlns:local="clr-namespace:BatButton"
         mc:Ignorable="d"
         Title="MainWindow" Width="1800" Height="900">
+    <Window.Resources>
+        <Storyboard x:Key="parentsfade">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="600"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="300"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="600"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="300"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="button">
+            <BeginStoryboard x:Name="parentsfade_BeginStoryboard" Storyboard="{StaticResource parentsfade}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
         <Image Margin="-4,-2,0,0" Source="Pictures/gothamBG.png" Stretch="Fill"/>
-        <Button x:Name="button" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="200">
+        <Button x:Name="button" HorizontalAlignment="Center" Height="600" VerticalAlignment="Center" Width="600">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -17,7 +41,10 @@
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
+            <Image Height="280.814" Source="Pictures/Batkid (1).png" Stretch="Fill" Width="145.58" Margin="0"/>
         </Button>
+        <Image x:Name="image" Margin="941.349,209.545,621.581,249.617" Source="Pictures/businesswoman-clipart-money-13.png" Stretch="Fill" Opacity="0.8"/>
+        <Image x:Name="image1" Margin="642.862,192.212,959.371,232.021" Source="Pictures/clipart-man-transparent-background-2.png" Stretch="Fill" Opacity="0.8"/>
 
     </Grid>
 </Window>

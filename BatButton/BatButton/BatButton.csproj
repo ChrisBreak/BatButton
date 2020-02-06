@@ -94,9 +94,47 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\images.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\gothamBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\businessperson-cartoon-silhouette-business-woman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\businesswoman-clipart-money-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\clipart-man-transparent-background-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\dbk4qdj-3608c08b-d2ae-4df6-a7fa-5a1c1e7f0117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\0c9fcb40c477d5d8f05b96cdc81b4e6d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\original %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\original_transport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\0731699088f1d33e6f96e978eceba3f2_boy-male-black-hair-brown-hair-clip-art-business-suit-cliparts-_900-1800.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\0731699088f1d33e6f96e978eceba3f2_boy-male-black-hair-brown-hair-clip-art-business-suit-cliparts-_900-1800 %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\batkid.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Batkid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Batkid %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
