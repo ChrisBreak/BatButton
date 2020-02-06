@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BatButton"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Width="1800" Height="900">
     <Grid>
         <Button x:Name="button" HorizontalAlignment="Left" Height="171" Margin="310,144,0,0" VerticalAlignment="Top" Width="171">
             <Button.Template>
