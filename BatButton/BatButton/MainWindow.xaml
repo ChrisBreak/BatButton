@@ -6,7 +6,120 @@
         xmlns:local="clr-namespace:BatButton"
         mc:Ignorable="d"
         Title="MainWindow" Width="1800" Height="900">
-    <Grid>
+    <Window.Resources>
+        <Storyboard x:Key="batsFlying">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="65"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="65"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="113.417"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="152.917"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="246.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="333.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="433.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-3.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-3.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="6.709"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-5.791"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-11.458"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-24.458"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-56.958"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-104.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-178.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-248.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-333.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-435.916"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="11.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="11.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="12"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="12.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="27.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="45.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="58.666"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.995"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-44.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-118.875"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-188.875"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-273.875"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-375.875"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="15.917"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="33.584"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="47.084"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="48.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="88.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="181.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="268.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="368.834"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-54"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource batsFlying}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="Black">
         <Image Margin="-4,-2,0,0" Source="Pictures/gothamBG.png" Stretch="Fill"/>
         <Button x:Name="button" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="200">
             <Button.Template>
@@ -18,6 +131,46 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Image x:Name="image" Margin="909.334,429.667,821,374.333" Source="Pictures/flying-bat.png" Stretch="Fill" Opacity="0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image1" Margin="822.833,426.5,905.833,377.5" Source="Pictures/flying-bat.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image3" Margin="957.167,445.667,758.333,368.5" Source="Pictures/flyingdown.png" Stretch="Fill" Opacity="0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image2" Margin="765.666,458.002,948.834,357.665" Source="Pictures/flyingdown.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>
