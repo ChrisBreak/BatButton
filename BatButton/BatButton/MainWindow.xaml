@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Width="1800" Height="900">
     <Grid>
+        <Image Margin="-4,-2,0,0" Source="Pictures/gothamBG.png" Stretch="Fill"/>
         <Button x:Name="button" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="200">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
