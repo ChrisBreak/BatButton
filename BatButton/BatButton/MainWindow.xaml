@@ -669,7 +669,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="Black">
-        <Image Margin="-4,-2,0,0" Source="Pictures/gothamBG.png" Stretch="Fill"/>
+        <Image Margin="-4,-2,0,0" Source="Pictures/gothanCartoon.jpg" Stretch="Fill"/>
         <Button x:Name="button" HorizontalAlignment="Center" Height="300" VerticalAlignment="Center" Width="300">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
