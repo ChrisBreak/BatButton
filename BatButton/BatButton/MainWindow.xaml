@@ -36,12 +36,12 @@
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
-                        <Ellipse Fill="Black"/>
+                        <Ellipse Fill="#FF101C2F"/>
                         <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
-            <Image Source="Pictures/guy-clipart-chibi-4-transparent.png" Stretch="Fill" Height="241.6" Width="129.6"/>
+            <Image Source="Pictures/guy-clipart-chibi-4-transparent.png" Stretch="Fill" Height="200" Width="120"/>
         </Button>
         <Image x:Name="image" Margin="958.4,254.4,667.2,257.6" Source="Pictures/clipart-girl-dress-9-transparent.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.85">
             <Image.RenderTransform>
