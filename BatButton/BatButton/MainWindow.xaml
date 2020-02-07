@@ -23,15 +23,30 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="hoverAim">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1084.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="50.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="4.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="19.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource hoverAim}"/>
+        </EventTrigger>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="button">
             <BeginStoryboard x:Name="parentsfade_BeginStoryboard" Storyboard="{StaticResource parentsfade}"/>
         </EventTrigger>
     </Window.Triggers>
     <Grid>
-        <Image Margin="-4,-2,0,0" Source="Pictures/gothamBG.png" Stretch="Fill"/>
+        <Image Margin="-4,-2,0,0" Source="Pictures/gothanCartoon.jpg" Stretch="Fill"/>
         <Button x:Name="button" HorizontalAlignment="Center" Height="600" VerticalAlignment="Center" Width="600">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -54,6 +69,16 @@
             </Image.RenderTransform>
         </Image>
         <Image x:Name="image1" Margin="680,228.8,964.8,257.6" Source="Pictures/clipart-man-transparent-background-2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.85">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image2" Margin="235.6,555.2,1378,135.2" Source="Pictures/aimReticle.png" Stretch="Fill" Width="180" Height="180" Opacity="0" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
