@@ -63,18 +63,11 @@ namespace BatButton
             }
         }
 
-        private void BatButton_MouseEnter(object sender, MouseEventArgs e)
+        private void BatButton_Click(object sender, RoutedEventArgs e)
         {
-            //OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
-            //if (openFileDialog.ShowDialog() == true)
-            {
-                thunder.Open(new Uri("../../Pictures/THUNDER.mp3", UriKind.RelativeOrAbsolute));
-                thunder.Play();
-            }
-
-
-            //thunder.Play();
+            thunder.Open(new Uri("../../Pictures/THUNDER.mp3", UriKind.RelativeOrAbsolute));
+            //thunder.SpeedRatio = 0.8;
+            thunder.Play();
         }
     }
 }
