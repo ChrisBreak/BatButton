@@ -818,6 +818,23 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="hoverAim">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image18">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1111.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="49.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="699"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image18">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-16.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="7.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image18">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BatButton">
@@ -826,7 +843,9 @@
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BatButton2">
             <BeginStoryboard x:Name="parentsfade_BeginStoryboard" Storyboard="{StaticResource parentsfade}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="BatButton2">
+            <BeginStoryboard x:Name="hoverAim_BeginStoryboard" Storyboard="{StaticResource hoverAim}"/>
+        </EventTrigger>
     </Window.Triggers>
     <Grid x:Name="grid">
         <Grid.Background>
@@ -1044,6 +1063,16 @@
         </Button>
         <Image x:Name="momImage" Margin="958.4,254.4,667.2,257.6" Source="Pictures/clipart-girl-dress-9-transparent.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.85"/>
         <Image x:Name="dadImage" Margin="680,228.8,964.8,257.6" Source="Pictures/clipart-man-transparent-background-2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.85"/>
+        <Image x:Name="image18" Margin="225.25,594.5,1426.75,134.5" Source="Pictures/aimReticle.png" Stretch="Fill" Width="140" Height="140" Opacity="0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>

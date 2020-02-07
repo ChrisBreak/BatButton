@@ -50,7 +50,6 @@ namespace BatButton
             deadParentsAnimation = (Storyboard)Resources["parentsfade"];
             fallingWellAnimation = (Storyboard)Resources["batsFlying"];
 
-
             deadParentsAnimation.Completed += (s, e) =>
             {
                 fallingWellAnimation.Begin();
