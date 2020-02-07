@@ -8,19 +8,19 @@
         Title="MainWindow" Width="1800" Height="900">
     <Window.Resources>
         <Storyboard x:Key="parentsfade">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image1">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="600"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="300"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="600"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="300"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="600"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="300"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="600"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="300"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
@@ -41,10 +41,28 @@
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
-            <Image Height="280.814" Source="Pictures/Batkid (1).png" Stretch="Fill" Width="145.58" Margin="0"/>
+            <Image Source="Pictures/guy-clipart-chibi-4-transparent.png" Stretch="Fill" Height="241.6" Width="129.6"/>
         </Button>
-        <Image x:Name="image" Margin="941.349,209.545,621.581,249.617" Source="Pictures/businesswoman-clipart-money-13.png" Stretch="Fill" Opacity="0.8"/>
-        <Image x:Name="image1" Margin="642.862,192.212,959.371,232.021" Source="Pictures/clipart-man-transparent-background-2.png" Stretch="Fill" Opacity="0.8"/>
+        <Image x:Name="image" Margin="958.4,254.4,667.2,257.6" Source="Pictures/clipart-girl-dress-9-transparent.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.85">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image1" Margin="680,228.8,964.8,257.6" Source="Pictures/clipart-man-transparent-background-2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.85">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>
