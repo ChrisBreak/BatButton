@@ -53,7 +53,7 @@
                 <GradientStop Color="Black" Offset="0.167"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="BatButton" HorizontalAlignment="Center" Height="200 VerticalAlignment="Center" Width="200" Background="#FF1B1717" BorderBrush="Red" Foreground="Red">
+        <Button x:Name="BatButton" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="200" Background="#FF1B1717" BorderBrush="Red" Foreground="Red" MouseEnter="BatButton_MouseEnter">
             <Grid>
                 <Image Source="Pictures/batman-icon.png" Stretch="Uniform" Height="170" Width="139.002" />
             </Grid>

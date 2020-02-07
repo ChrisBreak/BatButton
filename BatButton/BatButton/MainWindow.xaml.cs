@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace BatButton
 {
@@ -21,12 +22,19 @@ namespace BatButton
     public partial class MainWindow : Window
     {
 
+        private MediaPlayer thunder = new MediaPlayer();
+
         //From the tutorial notes, animation declaration should be here
 
         public MainWindow()
         {
             InitializeComponent();
             this.KeyUp += MainWindow_KeyUp;
+
+            //thunder.Open(new Uri("Pictures/THUNDER.mp3", UriKind.Relative));
+            //thunder.Volume += 0.2;
+
+            //thunder.Open(new Uri("Pictures/THUNDER.mp3"));
 
             /*The animations should be initialized here
              *
@@ -55,5 +63,18 @@ namespace BatButton
             }
         }
 
+        private void BatButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
+            //if (openFileDialog.ShowDialog() == true)
+            {
+                thunder.Open(new Uri("../../Pictures/THUNDER.mp3", UriKind.RelativeOrAbsolute));
+                thunder.Play();
+            }
+
+
+            //thunder.Play();
+        }
     }
 }

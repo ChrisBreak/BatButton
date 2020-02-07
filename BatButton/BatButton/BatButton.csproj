@@ -100,5 +100,8 @@
   <ItemGroup>
     <Resource Include="Pictures\batman-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pictures\THUNDER.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
