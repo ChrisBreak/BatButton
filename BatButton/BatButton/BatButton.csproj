@@ -108,6 +108,9 @@
     <Resource Include="Pictures\gothamBG.png" />
     <Resource Include="Pictures\gothanCartoon.jpg" />
     <Resource Include="Pictures\guy-clipart-chibi-4-transparent.png" />
+    <Resource Include="Pictures\clipart-girl-dress-9-transparent.png" />
+    <Resource Include="Pictures\clipart-man-transparent-background-2.png" />
+    <Content Include="Pictures\gun-sound-effect-2.mp3" />
     <Content Include="Pictures\THUNDER.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
